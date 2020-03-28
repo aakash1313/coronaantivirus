@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "453502615545",
+    "firebase_url": "https://coronaantivirus-8b5c1.firebaseio.com",
+    "project_id": "coronaantivirus-8b5c1",
+    "storage_bucket": "coronaantivirus-8b5c1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:453502615545:android:ce2a34c227b101c6230728",
+        "android_client_info": {
+          "package_name": "com.coronaantivirus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "453502615545-o5t2te7cfm3nemicmhlk2854ea0hre0r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgahnhxnhNdo4yuAOX6s6zgaM6c1EeTvU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "453502615545-o5t2te7cfm3nemicmhlk2854ea0hre0r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
