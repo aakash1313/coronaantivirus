@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>453502615545-7q0l1d5gtkpqdtm9o52skd8sjn4ait74.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.453502615545-7q0l1d5gtkpqdtm9o52skd8sjn4ait74</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB5iW4cvq0y348_LpcPVYKPa804J9E49OY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>453502615545</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.coronaantivirus</string>
+	<key>PROJECT_ID</key>
+	<string>coronaantivirus-8b5c1</string>
+	<key>STORAGE_BUCKET</key>
+	<string>coronaantivirus-8b5c1.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:453502615545:ios:8fa1e5d1d0eb7ea9230728</string>
+	<key>DATABASE_URL</key>
+	<string>https://coronaantivirus-8b5c1.firebaseio.com</string>
+</dict>
+</plist>
