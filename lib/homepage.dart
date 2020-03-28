@@ -20,34 +20,39 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text("Location"),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            if(_currentPosition != null)
-              Text("LAT: ${_currentPosition.latitude}, LNG: ${_currentPosition.longitude}"),
-            FlatButton(
-              child: Text("Get location"),
-              onPressed: () {
-                // Get location here
-                log("Write my location to file");
-                _getCurrentLocation();
-                fileHandler.writeMyLocationToFile(_currentPosition.toString());
-                fileHandler.readMyLocationFromFile().then((location){
-                  log("Written location to file"+ location);
-                });
+      body: Builder(
+        builder: (context) =>Container(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              if(_currentPosition != null)
+                Text("LAT: ${_currentPosition.latitude}, LNG: ${_currentPosition.longitude}"),
+              FlatButton(
+                child: Text("Get location"),
+                onPressed: () {
+                  // Get location here
+                  log("Write my location to file");
+                  _getCurrentLocation();
+                  fileHandler.writeMyLocationToFile(_currentPosition.toString());
+                  fileHandler.readMyLocationFromFile().then((location){
+                    log("Written location to file"+ location);
+                  });
 
-              },
-            ),
-            FlatButton(
-              child: Text("Save file to server"),
-              onPressed: () {
-                // Save file to server
-              },
-            ),
-          ],
+                },
+              ),
+              FlatButton(
+                child: Text("Save file to server"),
+                onPressed: () {
+                  // Save file to server
+                  fileHandler.uploadInfectedFileToServer(context);
+                },
+              ),
+            ],
+          ),
         ),
       ),
+    ),
     );
   }
 
