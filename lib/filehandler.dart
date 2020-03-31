@@ -20,7 +20,7 @@ class FileHandler {
   Future<File> writeMyLocationToFile(String locationString) async {
     final file = await _localFile;
     // Write the file.
-    return file.writeAsString('$locationString');
+    return file.writeAsString('$locationString', mode: FileMode.append);
   }
 
   Future<String> readMyLocationFromFile() async {
