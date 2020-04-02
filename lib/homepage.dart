@@ -4,7 +4,6 @@ import 'package:coronaantivirus/background_location.dart';
 import 'package:coronaantivirus/filehandler.dart';
 import 'package:coronaantivirus/mapwidget.dart';
 import 'package:flutter/material.dart';
-import 'package:geolocator/geolocator.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -13,7 +12,6 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 
-   Position _currentPosition;
    FileHandler fileHandler = new FileHandler();
 
    @override
@@ -84,20 +82,4 @@ class _HomePageState extends State<HomePage> {
     ),
     );
   }
-
-   _getCurrentLocation() {
-     final Geolocator geolocator = Geolocator()..forceAndroidLocationManager;
-
-     geolocator
-         .getCurrentPosition(desiredAccuracy: LocationAccuracy.best)
-         .then((Position position) {
-       setState(() {
-         _currentPosition = position;
-       });
-     }).catchError((e) {
-       print(e);
-     });
-   }
-
-
 }
