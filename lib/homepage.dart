@@ -2,6 +2,7 @@ import 'dart:developer';
 
 import 'package:coronaantivirus/background_location.dart';
 import 'package:coronaantivirus/filehandler.dart';
+import 'package:coronaantivirus/mapwidget.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 
@@ -35,24 +36,47 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              if(_currentPosition != null)
-                Text("LAT: ${_currentPosition.latitude}, LNG: ${_currentPosition.longitude}"),
-              FlatButton(
-                child: Text("Get location"),
-                onPressed: () {
-                  // Get location here
-                  fileHandler.readMyLocationFromFile().then((location){
-                    print("Written location to file"+ location);
-                  });
-                },
+              Expanded(
+                flex: 7,
+                child: new GoogleMapWidget(),
               ),
-              FlatButton(
-                child: Text("Save file to server"),
-                onPressed: () {
-                  // Save file to server
-                  fileHandler.uploadInfectedFileToServer(context);
-                },
+              Expanded(
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                      flex: 5,
+                      child: RaisedButton(
+                        shape: new RoundedRectangleBorder(
+                            borderRadius: new BorderRadius.circular(10.0),
+                            side: BorderSide(color: Colors.red)),
+                        child: Text("Start Scanning"),
+                        onPressed: () {
+                          // Get location here
+                          fileHandler.readMyLocationFromFile().then((location){
+                            print("Written location to file"+ location);
+                          });
+                        },
+                      ),
+                    ),
+                    Expanded(
+                      flex: 5,
+                      child: RaisedButton(
+                        shape: new RoundedRectangleBorder(
+                            borderRadius: new BorderRadius.circular(10.0),
+                            side: BorderSide(color: Colors.red)),
+                        child: Text("I got covid, save others"),
+                        onPressed: () {
+                          // Get location here
+                          fileHandler.readMyLocationFromFile().then((location){
+                            print("Written location to file"+ location);
+                          });
+                        },
+                      ),
+                    ),
+                  ],
+                ),
               ),
+              Text("We will not share your location without your consent"),
             ],
           ),
         ),
