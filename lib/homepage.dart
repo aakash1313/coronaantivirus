@@ -25,7 +25,9 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Location"),
+        title: Center(
+         child: Text("Corona Antivirus"),
+      ),
       ),
       body: Builder(
         builder: (context) =>Container(
